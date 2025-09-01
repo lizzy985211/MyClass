@@ -30,9 +30,7 @@ jobs:
 
       # 5. 部署到 gh-pages
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v6
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}  # GitHub 自动生成，无需手动设置
           publish_dir: ./dist                          # dist 输出目录
-          keep_files: false                            # 可选，清空 gh-pages 旧内容
-          force_orphan: true                           # 如果 gh-pages 不存在，自动创建
