@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 const routes = [
 	{ path: '/', redirect: '/school/default/grade/grade1/class/class1/subject/chinese/exam/exam1/subtab/classes' },
@@ -30,5 +30,8 @@ const routes = [
 	}
 ]
 
-const router = createRouter({ history: createWebHistory(), routes })
+const router = createRouter({
+	history: createWebHashHistory(import.meta.env.BASE_URL),
+	routes: routes
+  })
 export default router
