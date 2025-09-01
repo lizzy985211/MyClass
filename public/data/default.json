@@ -1,0 +1,74 @@
+{
+	"data": {
+		"grade1": {
+			"class1": {
+				"chinese": {
+					"examList": [
+						{ "name": "张三", "id": "s1", "gender": "男", "score": 88, "rank": 5, "date": "2024-09-01" },
+						{ "name": "李四", "id": "s2", "gender": "女", "score": 92, "rank": 2, "date": "2024-09-01" },
+						{ "name": "王五", "id": "s3", "gender": "男", "score": 76, "rank": 18, "date": "2024-09-01" },
+						{ "name": "赵六", "id": "s4", "gender": "女", "score": 85, "rank": 8, "date": "2024-09-01" },
+						{ "name": "孙七", "id": "s5", "gender": "男", "score": 94, "rank": 1, "date": "2024-09-01" },
+						{ "name": "周八", "id": "s6", "gender": "女", "score": 79, "rank": 12, "date": "2024-09-01" }
+					],
+					"pointList": [
+						{ "name": "张三", "id": "s1", "gender": "男", "score": 10, "rank": 8, "date": "2024-09-10" },
+						{ "name": "李四", "id": "s2", "gender": "女", "score": 12, "rank": 3, "date": "2024-09-10" },
+						{ "name": "王五", "id": "s3", "gender": "男", "score": 8, "rank": 15, "date": "2024-09-10" }
+					]
+				},
+				"math": {
+					"examList": [
+						{ "name": "张三", "id": "s1", "gender": "男", "score": 95, "rank": 1, "date": "2024-09-01" },
+						{ "name": "李四", "id": "s2", "gender": "女", "score": 89, "rank": 7, "date": "2024-09-01" },
+						{ "name": "王五", "id": "s3", "gender": "男", "score": 82, "rank": 11, "date": "2024-09-01" },
+						{ "name": "赵六", "id": "s4", "gender": "女", "score": 91, "rank": 4, "date": "2024-09-01" }
+					],
+					"pointList": []
+				},
+				"english": {
+					"examList": [
+						{ "name": "张三", "id": "s1", "gender": "男", "score": 81, "rank": 10, "date": "2024-09-01" },
+						{ "name": "李四", "id": "s2", "gender": "女", "score": 85, "rank": 8, "date": "2024-09-01" },
+						{ "name": "王五", "id": "s3", "gender": "男", "score": 77, "rank": 15, "date": "2024-09-01" }
+					],
+					"pointList": []
+				}
+			},
+			"class2": {
+				"chinese": {
+					"examList": [
+						{ "name": "陈九", "id": "s7", "gender": "男", "score": 86, "rank": 6, "date": "2024-09-01" },
+						{ "name": "刘十", "id": "s8", "gender": "女", "score": 90, "rank": 3, "date": "2024-09-01" }
+					],
+					"pointList": []
+				},
+				"math": { "examList": [], "pointList": [] },
+				"english": { "examList": [], "pointList": [] }
+			},
+			"class3": {
+				"chinese": { "examList": [], "pointList": [] },
+				"math": { "examList": [], "pointList": [] },
+				"english": { "examList": [], "pointList": [] }
+			}
+		},
+		"grade2": {
+			"class1": {
+				"chinese": {
+					"examList": [
+						{ "name": "吴十一", "id": "s9", "gender": "男", "score": 93, "rank": 2, "date": "2024-09-01" },
+						{ "name": "郑十二", "id": "s10", "gender": "女", "score": 87, "rank": 7, "date": "2024-09-01" }
+					],
+					"pointList": []
+				},
+				"math": { "examList": [], "pointList": [] },
+				"english": { "examList": [], "pointList": [] }
+			},
+			"class2": {
+				"chinese": { "examList": [], "pointList": [] },
+				"math": { "examList": [], "pointList": [] },
+				"english": { "examList": [], "pointList": [] }
+			}
+		}
+	}
+} 

@@ -1,0 +1,8 @@
+{
+    "Grade 9": {
+      "Class 1": [
+        {"studentId":"20250101","name":"Alice","points":12,"reason":"Good behavior","rank":1},
+        {"studentId":"20250102","name":"Bob","points":8,"reason":"Late submission","rank":2}
+      ]
+    }
+  }

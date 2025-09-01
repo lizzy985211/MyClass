@@ -1,0 +1,14 @@
+{
+    "2025_midterm_01": {
+      "Grade 9": {
+        "Class 1": {
+          "Math": [
+            {"studentId":"20250101","name":"Alice","gender":"F","score":95,"rank":1},
+            {"studentId":"20250102","name":"Bob","gender":"M","score":88,"rank":2}
+          ],
+          "English": []
+        },
+        "Class 2": {}
+      }
+    }
+  }

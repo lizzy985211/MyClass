@@ -1,0 +1,139 @@
+:root {
+	--color-text: #1f2937;
+	--bg-wuhan: #f2f6ff;
+	--bg-national: #f8fafc;
+	--primary: #2563eb;
+	--muted: #6b7280;
+	--card: #ffffff;
+	--border: #e5e7eb;
+}
+
+html, body, #app { height: 100%; margin: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif; color: var(--color-text); background: #f5f5f5; overflow-x: hidden; }
+
+.theme-wuhan { background: var(--bg-wuhan); }
+.theme-national { background: var(--bg-national); }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 16px; box-sizing: border-box; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.06); margin-bottom: 16px; overflow: hidden; }
+.row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+select, button { height: 32px; padding: 0 10px; border-radius: 6px; border: 1px solid var(--border); background: #fff; box-sizing: border-box; }
+button.primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+.tabs { display: flex; gap: 8px; border-bottom: 1px solid var(--border); margin-bottom: 10px; }
+.tab { padding: 8px 12px; cursor: pointer; border-bottom: 2px solid transparent; }
+.tab.active { border-color: var(--primary); color: var(--primary); }
+.table { width: 100%; border-collapse: collapse; }
+.table th, .table td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+.table th { background: #f9fafb; cursor: pointer; }
+
+.action-button {
+	margin-left: 15px;
+	padding: 10px 20px;
+	border: none;
+	background: #28a745;
+	color: white;
+	font-size: 16px;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+.controls {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	justify-content: center;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.control-group {
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+#students-wrapper {
+	max-height: 65vh;
+	overflow: auto;
+	padding: 10px 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#students {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: center;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.nav-wrapper {
+	max-width: 1500px;
+	margin: 0 auto 16px;
+	overflow-x: auto;
+	white-space: nowrap;
+	width: 100%;
+	padding: 12px 0 16px;
+	-webkit-overflow-scrolling: touch;
+	text-align: center;
+	box-sizing: border-box;
+}
+.nav-wrapper::-webkit-scrollbar { display: none; }
+
+.nav-container {
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 10px 16px;
+	background: #fff;
+	border-radius: 999px;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+	margin: 0 auto;
+	min-width: max-content;
+}
+
+.nav-link {
+	padding: 10px 20px;
+	margin: 0 10px;
+	font-weight: bold;
+	border-radius: 20px;
+	text-decoration: none;
+	color: #000;
+	transition: 0.3s;
+	white-space: nowrap;
+}
+
+.nav-link.active {
+	background-color: #0bc2d6;
+	color: #fff;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+	.container { padding: 8px; }
+	.row { gap: 8px; justify-content: center; }
+	select, button { height: 36px; padding: 0 8px; font-size: 14px; min-width: 80px; }
+	.nav-wrapper { width: 100%; padding: 8px 0 12px; }
+	.nav-container { padding: 8px 12px; }
+	.nav-link { padding: 8px 16px; margin: 0 6px; font-size: 14px; }
+	.card { padding: 8px; margin-bottom: 12px; }
+	.controls { gap: 8px; }
+	.control-group { gap: 8px; }
+	.action-button { margin-left: 8px; padding: 8px 16px; font-size: 14px; }
+	#students { gap: 8px; }
+}
+
+@media (max-width: 480px) {
+	.container { padding: 4px; }
+	.row { flex-direction: column; align-items: stretch; gap: 6px; }
+	select, button { width: 100%; max-width: 200px; margin: 0 auto; }
+	.nav-link { padding: 6px 12px; margin: 0 4px; font-size: 13px; }
+	.controls { flex-direction: column; align-items: center; }
+	.control-group { flex-direction: column; align-items: center; width: 100%; }
+	.action-button { margin-left: 0; width: 100%; max-width: 200px; }
+	#students { flex-direction: column; align-items: center; }
+} 

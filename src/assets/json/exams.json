@@ -1,0 +1,18 @@
+[
+    {
+      "examId": "2025_midterm_01",
+      "examName": "2025 Midterm Exam",
+      "date": "2025-03-15",
+      "grade": "Grade 9",
+      "class": "Class 1",
+      "subject": "Math"
+    },
+    {
+      "examId": "2025_final_01",
+      "examName": "2025 Final Exam",
+      "date": "2025-07-01",
+      "grade": "Grade 9",
+      "class": "Class 1",
+      "subject": "Math"
+    }
+  ]
