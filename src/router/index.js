@@ -11,17 +11,14 @@ const routes = [
 				component: () => import('../views/SubjectTabs.vue'),
 				children: [
 					{
-						path: 'exam/points/pointsTab/:pointsTab',
-						name: 'Points',
-						component: () => import('../views/PointsView.vue')
-					},
-					{
 						path: 'exam/:examTab',
 						component: () => import('../views/ExamTabs.vue'),
 						children: [
 							{ path: 'subtab/classes', name: 'ClassList', component: () => import('../views/ClassListView.vue') },
 							{ path: 'subtab/personal', name: 'PersonalTrend', component: () => import('../views/PersonalTrendView.vue') },
-							{ path: 'subtab/quality', name: 'QualityAnalysis', component: () => import('../views/QualityAnalysisView.vue') }
+							{ path: 'subtab/quality', name: 'QualityAnalysis', component: () => import('../views/QualityAnalysisView.vue') },
+							    // ✅ 积分子路由（同一个页面，根据参数渲染）
+							{ path: 'pointsTab/:pointsTab', name: 'Points', component: () => import('../views/PointsView.vue') }
 						]
 					}
 				]

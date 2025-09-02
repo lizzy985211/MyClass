@@ -3,7 +3,7 @@
 		"grade1": {
 			"class1": {
 				"chinese": {
-					"examList": [
+					"examList1": [
 						{ "name": "张三", "id": "s1", "gender": "男", "score": 88, "rank": 5, "date": "2024-09-01" },
 						{ "name": "李四", "id": "s2", "gender": "女", "score": 92, "rank": 2, "date": "2024-09-01" },
 						{ "name": "王五", "id": "s3", "gender": "男", "score": 76, "rank": 18, "date": "2024-09-01" },

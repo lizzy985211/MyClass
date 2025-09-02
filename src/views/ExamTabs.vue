@@ -1,23 +1,35 @@
 <template>
 	<div class="nav-wrapper">
 		<div class="nav-container">
-			<a v-for="e in examTabs" :key="e.key" href="javascript:void(0);" :class="['nav-link', activeExam===e.key?'active':'']" @click="goExam(e.key)">{{ e.label }}</a>
+			<!-- 二级tab：考试 + 积分 -->
+			<a v-for="e in examTabs" :key="e.key" :class="['nav-link', activeExam === e.key ? 'active' : '']"
+				@click="goExam(e.key)">
+				{{ e.label }}
+			</a>
 		</div>
 	</div>
-	<div v-if="activeExam!=='points'" class="nav-wrapper" style="padding-top:0;">
+
+	<!-- 三级tab -->
+	<div v-if="activeExam !== 'points'" class="nav-wrapper">
 		<div class="nav-container">
-			<a v-for="st in subTabs" :key="st.key" href="javascript:void(0);" :class="['nav-link', activeSubtab===st.key?'active':'']" @click="goSubtab(st.key)">{{ st.label }}</a>
+			<a v-for="sub in subTabs" :key="sub.key" :class="['nav-link', activeSubtab === sub.key ? 'active' : '']"
+				@click="goSubtab(sub.key)">
+				{{ sub.label }}
+			</a>
 		</div>
 	</div>
-	<div v-if="activeExam==='points'" class="nav-wrapper" style="padding-top:0;">
+
+	<div v-else class="nav-wrapper">
 		<div class="nav-container">
-			<a v-for="pt in pointsTabs" :key="pt.key" href="javascript:void(0);" :class="['nav-link', activePointsTab===pt.key?'active':'']" @click="goPointsTab(pt.key)">{{ pt.label }}</a>
+			<a v-for="pt in pointsTabs" :key="pt.key" :class="['nav-link', activePointsTab === pt.key ? 'active' : '']"
+				@click="goPointsTab(pt.key)">
+				{{ pt.label }}
+			</a>
 		</div>
 	</div>
-	<div class="card">
-		<PointsView v-if="activeExam==='points'" :activeTab="activePointsTab" />
-		<router-view v-else />
-	</div>
+
+	<!-- 子页面 -->
+	<router-view />
 </template>
 
 <script setup>
@@ -28,7 +40,7 @@ import PointsView from './PointsView.vue'
 const router = useRouter()
 const route = useRoute()
 
-const examTabs = Array.from({ length: 10 }).map((_, i) => ({ key: `exam${i+1}`, label: `考试${i+1}` }))
+const examTabs = Array.from({ length: 10 }).map((_, i) => ({ key: `exam${i + 1}`, label: `考试${i + 1}` }))
 examTabs.push({ key: 'points', label: '积分' })
 
 const subTabs = [
@@ -85,4 +97,4 @@ function goSubtab(subKey) {
 function goPointsTab(tabKey) {
 	router.push({ path: `/school/${route.params.school}/grade/${route.params.grade}/class/${route.params.klass}/subject/${route.params.subject}/exam/points/pointsTab/${tabKey}` })
 }
-</script> 
+</script>
